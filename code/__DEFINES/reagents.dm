@@ -104,25 +104,27 @@
 #define REAGENT_DONOTSPLIT (1<<1)
 ///Doesn't appear on handheld health analyzers.
 #define REAGENT_INVISIBLE (1<<2)
+///When inverted, the inverted chem uses the name of the original chem
+#define REAGENT_SNEAKYNAME (1<<3)
 ///Retains initial volume of chem when splitting for purity effects
-#define REAGENT_SPLITRETAINVOL (1<<3)
+#define REAGENT_SPLITRETAINVOL (1<<4)
 ///Lets a given reagent be synthesized important for random reagents and things like the odysseus syringe gun(Replaces the old can_synth variable)
-#define REAGENT_CAN_BE_SYNTHESIZED (1<<4)
+#define REAGENT_CAN_BE_SYNTHESIZED (1<<5)
 ///Allows a reagent to work on a mob regardless of stasis
-#define REAGENT_IGNORE_STASIS (1<<5)
+#define REAGENT_IGNORE_STASIS (1<<6)
 ///This reagent won't be used in most randomized recipes. Meant for reagents that could be synthetized but are normally inaccessible or TOO hard to get.
-#define REAGENT_NO_RANDOM_RECIPE (1<<6)
+#define REAGENT_NO_RANDOM_RECIPE (1<<7)
 ///Does this reagent clean things?
-#define REAGENT_CLEANS (1<<7)
+#define REAGENT_CLEANS (1<<8)
 ///Does this reagent affect wounds? Used to check if some procs should be ran.
-#define REAGENT_AFFECTS_WOUNDS (1<<8)
+#define REAGENT_AFFECTS_WOUNDS (1<<9)
 /// If present, when metabolizing out of a mob, we divide by the mob's metabolism rather than multiply.
 /// Without this flag: Higher metabolism means the reagent exits the system faster.
 /// With this flag: Higher metabolism means the reagent exits the system slower.
-#define REAGENT_REVERSE_METABOLISM (1<<9)
+#define REAGENT_REVERSE_METABOLISM (1<<10)
 /// If present, this reagent will not be affected by the mob's metabolism at all, meaning it exits at a fixed rate for all mobs.
 /// Supercedes [REAGENT_REVERSE_METABOLISM].
-#define REAGENT_UNAFFECTED_BY_METABOLISM (1<<10)
+#define REAGENT_UNAFFECTED_BY_METABOLISM (1<<11)
 
 //Chemical reaction flags, for determining reaction specialties
 ///Convert into impure/pure on reaction completion

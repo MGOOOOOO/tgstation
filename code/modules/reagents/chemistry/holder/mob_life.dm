@@ -165,7 +165,7 @@
 	if((reagent.inverse_chem_val > added_purity) && (reagent.inverse_chem))//Turns all of a added reagent into the inverse chem
 		add_reagent(reagent.inverse_chem, added_volume, FALSE, added_purity = reagent.get_inverse_purity(reagent.creation_purity))
 		var/datum/reagent/inverse_reagent = has_reagent(reagent.inverse_chem)
-		if(inverse_reagent.chemical_flags)
+		if(inverse_reagent.chemical_flags & REAGENT_SNEAKYNAME)
 			inverse_reagent.name = reagent.name//Negative effects are hidden
 		return FALSE //prevent addition
 	return added_volume
